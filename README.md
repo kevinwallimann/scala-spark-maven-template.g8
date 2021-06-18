@@ -4,13 +4,15 @@
 
 ### Install archetype
 
-1. Download the artifact to your local maven repository
+1. Clone the repo
 ```
-mvn dependency:get -Dartifact=za.co.absa.hyperdrive:component-archetype:4.2.0
+git clone https://github.com/kevinwallimann/scala-spark-archetype.git
 ```
-2. Update the local archetype catalog (only needs to be done once)
+
+2. Build and install the artifact in your local maven repository
 ```
-mvn archetype:crawl
+cd scala-spark-archetype
+mvn clean install
 ```
 
 ### Create project from archetype
