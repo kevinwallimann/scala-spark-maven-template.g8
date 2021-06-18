@@ -16,17 +16,29 @@
 
 package ${package}
 import org.apache.spark.sql.functions._
-import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.types.{IntegerType, StringType, StructField, StructType}
+import org.apache.spark.sql.{Row, SparkSession}
 
 
 object MySparkApp extends App {
   override def main(args: Array[String]): Unit = {
-    val spark = SparkSession.builder().getOrCreate()
+    val spark = SparkSession.builder().appName("${artifactId} Spark Job").getOrCreate()
+    val rows = (1 to 100).map(Row(_, "hello world"))
+    val schema = StructType(List(
+      StructField("number", IntegerType, nullable = true),
+      StructField("word", StringType, nullable = true)
+    ))
+
+    val df = spark.createDataFrame(
+      spark.sparkContext.parallelize(rows),
+      schema
+    )
+
+    val columnSum = df.select(sum(col("number")))
     import spark.implicits._
-    val df = spark.sparkContext.parallelize(1 to 100).toDF()
-    val columnSum = df.select(sum(col("value")))
     val result = columnSum.map(_ (0).asInstanceOf[Long]).collect().head
+    println("Column Sum:")
     println(result)
+    spark.stop()
   }
 }
-

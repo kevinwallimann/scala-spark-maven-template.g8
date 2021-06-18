@@ -21,13 +21,22 @@
         name="archetype">
     <requiredProperties>
         <requiredProperty key="groupId">
-            <defaultValue>com.acme</defaultValue>
+            <defaultValue>com.example</defaultValue>
         </requiredProperty>
         <requiredProperty key="artifactId">
             <defaultValue>spark-example</defaultValue>
         </requiredProperty>
         <requiredProperty key="version">
             <defaultValue>0.1.0-SNAPSHOT</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="sparkVersion">
+            <defaultValue>3.1.2</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="scalaVersion">
+            <defaultValue>2.12.10</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="scalaMajorVersion">
+            <defaultValue>2.12</defaultValue>
         </requiredProperty>
     </requiredProperties>
     <fileSets>
