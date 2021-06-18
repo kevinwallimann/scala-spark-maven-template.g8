@@ -20,7 +20,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.kevinwallimann</groupId>
-    <artifactId>spark-archetype</artifactId>
+    <artifactId>scala-spark-archetype</artifactId>
     <version>0.1.0</version>
     <packaging>maven-archetype</packaging>
 

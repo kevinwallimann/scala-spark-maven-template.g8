@@ -18,7 +18,7 @@ mvn archetype:crawl
 ```
 mvn archetype:generate \
 -DarchetypeGroupId=com.github.kevinwallimann \
--DarchetypeArtifactId=spark-archetype \
+-DarchetypeArtifactId=scala-spark-archetype \
 -DarchetypeVersion=0.1.0
 ```
 This will start the interactive mode. Type 'N' when prompted to accept the default settings and provide your own if needed.
@@ -39,7 +39,7 @@ Hint: Instead of interactive mode, you can use the batch mode like this:
 mvn archetype:generate \
 -B
 -DarchetypeGroupId=com.github.kevinwallimann \
--DarchetypeArtifactId=spark-archetype \
+-DarchetypeArtifactId=scala-spark-archetype \
 -DarchetypeVersion=0.1.0
 -DgroupId=<groupId> \
 -DartifactId=<artifactId> \
