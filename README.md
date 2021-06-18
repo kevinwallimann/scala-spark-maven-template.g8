@@ -1,4 +1,7 @@
-# Spark Archetype
+# Scala Spark Archetype
+
+A maven template for Spark and Scala. The main class contains a sample spark app. The code also contains a sample unit test.
+Obviously, this is not production-ready code.
 
 ## Usage
 
@@ -16,16 +19,17 @@ mvn clean install
 ```
 
 ### Create project from archetype
-3. Generate a project by executing the following command
+1. Generate a project by executing the following command
 ```
 mvn archetype:generate \
 -DarchetypeGroupId=com.github.kevinwallimann \
 -DarchetypeArtifactId=scala-spark-archetype \
 -DarchetypeVersion=0.1.0
 ```
-This will start the interactive mode. Type 'N' when prompted to accept the default settings and provide your own if needed.
+This will start the interactive mode. Press Enter when prompted to accept the default settings or type `N` to refuse them
+and provide your own settings if needed.
 
-Default settings
+**Default settings**
 
 | Setting | Default value |
 | --- | --- |
@@ -51,7 +55,7 @@ mvn archetype:generate \
 -DscalaMajorVersion=<scala-major-version>
 ```
 
-4. Build the code
+2. Build the code
 ```
 cd <artifactId>
 mvn clean package
@@ -59,7 +63,7 @@ mvn clean package
 
 Hint: Skip tests like this `mvn clean package -DskipTests`
 
-5. Run the code
+3. Run the code
 ```
 spark-submit target/<artifactId>-<version>.jar
 ```
