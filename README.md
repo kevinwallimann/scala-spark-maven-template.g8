@@ -43,7 +43,7 @@ and provide your own settings if needed.
 Hint: Instead of interactive mode, you can use the batch mode like this:
 ```
 mvn archetype:generate \
--B
+-B \
 -DarchetypeGroupId=com.github.kevinwallimann \
 -DarchetypeArtifactId=scala-spark-archetype \
 -DarchetypeVersion=0.1.0
