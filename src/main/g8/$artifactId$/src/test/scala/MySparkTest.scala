@@ -1,4 +1,4 @@
-package ${package}
+package $package$
 
 import org.apache.spark.sql.functions._
 import org.scalatest.flatspec.AnyFlatSpec

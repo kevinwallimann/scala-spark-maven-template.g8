@@ -14,7 +14,7 @@
  *   limitations under the License.
  */
 
-package ${package}
+package $package$
 import org.apache.spark.sql.functions._
 import org.apache.spark.sql.types.{IntegerType, StringType, StructField, StructType}
 import org.apache.spark.sql.{Row, SparkSession}
@@ -22,7 +22,7 @@ import org.apache.spark.sql.{Row, SparkSession}
 
 object MySparkApp extends App {
   override def main(args: Array[String]): Unit = {
-    val spark = SparkSession.builder().appName("${artifactId} Spark Job").getOrCreate()
+    val spark = SparkSession.builder().appName("$artifactId$ Spark Job").getOrCreate()
     val rows = (1 to 100).map(Row(_, "hello world"))
     val schema = StructType(List(
       StructField("number", IntegerType, nullable = true),

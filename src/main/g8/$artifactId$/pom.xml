@@ -19,9 +19,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>\${groupId}</groupId>
-    <artifactId>\${artifactId}</artifactId>
-    <version>\${version}</version>
+    <groupId>$groupId$</groupId>
+    <artifactId>$artifactId$</artifactId>
+    <version>$version$</version>
     <packaging>jar</packaging>
 
     <properties>
@@ -29,11 +29,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <!-- Versions -->
-        <spark.version>\${sparkVersion}</spark.version>
+        <spark.version>$sparkVersion$</spark.version>
 
         <!-- Build -->
-        <scala.version>\${scalaVersion}</scala.version>
-        <scala.compat.version>\${scalaMajorVersion}</scala.compat.version>
+        <scala.version>$scalaVersion$</scala.version>
+        <scala.compat.version>$scalaMajorVersion$</scala.compat.version>
         <scala.maven.plugin.version>4.5.3</scala.maven.plugin.version>
 
         <!-- Tests -->
@@ -65,7 +65,7 @@
         </dependency>
         <dependency>
             <groupId>za.co.absa.commons</groupId>
-            <artifactId>commons_${scala.compat.version}</artifactId>
+            <artifactId>commons_\${scala.compat.version}</artifactId>
             <version>\${absa.commons.version}</version>
             <scope>test</scope>
         </dependency>
@@ -89,7 +89,7 @@
                         <archive>
                             <manifest>
                                 <addClasspath>true</addClasspath>
-                                <mainClass>\${package}.MySparkApp</mainClass>
+                                <mainClass>$package$.MySparkApp</mainClass>
                             </manifest>
                         </archive>
                     </configuration>
@@ -129,7 +129,7 @@
                 <artifactId>scalatest-maven-plugin</artifactId>
                 <version>\${scalatest.maven.version}</version>
                 <configuration>
-                    <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
+                    <reportsDirectory>\${project.build.directory}/surefire-reports</reportsDirectory>
                     <junitxml>.</junitxml>
                     <filereports>TestSuite.txt</filereports>
                 </configuration>
