@@ -3,7 +3,7 @@
 A [Giter8][g8] template for Scala with Spark and Maven. The main class contains a sample spark app. The code also contains a sample unit test.
 Obviously, this is not production-ready code.
 
-# Usage (Giter)
+## Usage (Giter)
 
 1. Get [Giter8][g8]
 2. Run command `g8 kevinwallimann/scala-spark-maven-template.g8`
@@ -12,7 +12,7 @@ Obviously, this is not production-ready code.
 5. `mvn clean package`
 6. `spark-sumbit target/scala-<scala version>/<project name>-assembly-<project version>.jar`
 
-# Usage (SBT)
+## Usage (SBT)
 
 1. Run command `sbt new kevinwallimann/scala-spark-maven-template.g8`
 2. Fill in properties or keep defaults
@@ -20,7 +20,7 @@ Obviously, this is not production-ready code.
 4. `mvn clean package`
 5. `spark-sumbit target/scala-<scala version>/<project name>-assembly-<project version>.jar`
 
-# Properties (and their defaults)
+## Properties (and their defaults)
 ```
 artifactId=spark-example
 groupId=com.example
