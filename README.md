@@ -6,7 +6,7 @@ Obviously, this is not production-ready code.
 # Usage (Giter)
 
 1. Get [Giter8][g8]
-2. Run command `g8 kevinwallimann/scala-spark-archetype`
+2. Run command `g8 kevinwallimann/scala-spark-archetype.g8`
 3. Fill in properties or keep defaults
 4. `cd <project name>`
 5. `mvn clean package`
@@ -14,7 +14,7 @@ Obviously, this is not production-ready code.
 
 # Usage (SBT)
 
-1. Run command `sbt new kevinwallimann/scala-spark-archetype`
+1. Run command `sbt new kevinwallimann/scala-spark-archetype.g8`
 2. Fill in properties or keep defaults
 3. `cd <project name>`
 4. `mvn clean package`
